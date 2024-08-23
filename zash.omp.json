@@ -30,6 +30,7 @@
           "type": "git",
           "properties": {
             "branch_icon": "",
+            "branch_identical_icon": "\uf42e",
             "fetch_status": true
           },
           "style": "plain",
