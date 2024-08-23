@@ -33,13 +33,13 @@
             "fetch_status": true
           },
           "style": "plain",
-          "template": " <#DDB15F>git(</>{{ if or .Working.Changed .Staging.Changed }}<#BE3737>{{ else }}<#62ED8B>{{ end }}{{ .HEAD }}</><#DDB15F>)</>",
+          "template": " <#DDB15F>git(</>{{ if or .Working.Changed .Staging.Changed }}<#BE3737>{{ else }}<#62ED8B>{{ end }}{{ .HEAD }}</><#DDB15F>)</> {{ .BranchStatus }}",
           "type": "git"
         },
         {
           "foreground": "#fffff0",
           "style": "plain",
-          "template": "$",
+          "template": " $",
           "type": "text"
         }
       ],
