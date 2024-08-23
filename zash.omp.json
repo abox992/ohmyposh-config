@@ -27,15 +27,17 @@
         },
         {
           "foreground": "#D4AAFC",
+          "type": "git",
           "properties": {
-            "branch_icon": ""
+            "branch_icon": "",
+            "fetch_status": true
           },
           "style": "plain",
-          "template": " <#DDB15F>git(</>{{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} \uF044 {{ .Working.String }}{{ end }}{{ if and (.Staging.Changed) (.Working.Changed) }} |{{ end }}{{ if .Staging.Changed }} \uF046 {{ .Staging.String }}{{ end }}<#DDB15F>)</>",
+          "template": " <#DDB15F>git(</>{{ if or .Working.Changed .Staging.Changed }}<#BE3737>{{ else }}<#62ED8B>{{ end }}{{ .HEAD }}</><#DDB15F>)</>",
           "type": "git"
         },
         {
-          "foreground": "#ffffff",
+          "foreground": "#fffff0",
           "style": "plain",
           "template": "$",
           "type": "text"
