@@ -31,7 +31,8 @@
           "properties": {
             "branch_icon": "",
             "branch_identical_icon": "\uf42e",
-            "fetch_status": true
+            "fetch_status": true,
+            "native_fallback": true
           },
           "style": "plain",
           "template": " <#DDB15F>git(</>{{ if or .Working.Changed .Staging.Changed }}<#BE3737>{{ else }}<#62ED8B>{{ end }}{{ .HEAD }}</><#DDB15F>)</> {{ .BranchStatus }}",
